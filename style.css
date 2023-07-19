@@ -5,7 +5,7 @@
     padding: 0;
     font-family: 'Work Sans', sans-serif;
 }
-body{
+.all{
     width: 80%;
     margin: auto;
 }
@@ -124,6 +124,7 @@ ul li i{
 /* section1 part*/
 .section1{
     text-align: center;
+    margin-top: 60px;
 }
 .section1 h2{
     font-size: 35px;
@@ -146,27 +147,106 @@ ul li i{
 /* section2 part  */
 .section2{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
     margin-top: 50px;
 }
 .sec2-text h3{
     font-size: 35px;
 }
-.sec2-img{
+.sec2-img, .sec2-text{
     text-align: right;
 }
-.sec2-img img{
+.sec2-text{
+    height: 350px;
+}
+.position-pic>img{
     width: 80%;
 }
-.sec2-img .pic{
-    position: relative;
-    width: 160px;
+.position img{
+    width: 150px;
     height: 180px;
-    top: -120px;
-    left: -350px;
+    position: relative;
+    top: -100px;
+    left: -300px;
 }
+/* section3 part  */
+.section3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .icon-photp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 5px;
+  }
+  .icon-photp:hover{
+    border: 1px solid #F948B2;
+    border-radius: 30px;
+    background: white;
+    color: #F948B2;
+  }
+  .icon-photp img{
+    width: 35px;
+  }
 
+  /* footer part  */
+  footer{
+    text-align: center;
+    background-color: #0B0223;
+    color: white;
+    margin-top: 50px;
+    padding: 40px 10px;
+  }
+  .foot{
+    width: 80%;
+    margin: auto;
+  }
+  .footer-logo h2{
+    font-size: 40px;
+  }
+  .footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px
+  }
+  .footer-menu>ul{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 13px;
+ }
+  .footer-list>ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  footer p{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+  }
+  .footer-icon{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    margin-top: 45px;
+  }
+  .footer-icon li{
+    list-style: none;
+    font-size: 25px;
+  }
+
+ /* mobile responsive  */
 
 @media screen and (max-width:500px) {
     nav, ul, .banner-title{
@@ -176,33 +256,104 @@ ul li i{
     .banner, .section2{
         flex-direction: column-reverse;
     }
+    .title-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .sec2-text{
+        height: 250px;
+        text-align: center;
+    }
+    .position img{
+        width: 150px;
+        height: 180px;
+        position: relative;
+        top: -100px;
+        left: -200px;
+    }
     .title-text p{
         text-align: center;
     }
     .title-text{
         text-align: center;
     }
-    .title-img img, .banner-img img,{
-        width: 90%;
-        height: 100%;
-        margin: auto;
-    }
     .box{
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
-    .sec2-img{
+    .section3{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 40px;
+    }
+    .icon-photp{
+        width: 70%;
+        margin: auto;
+    }
+    .icon-photp img{
+        width: 20px;
+      }
+      .icon-photp p{
+        font-size: 5px;
+      }
+      .footer-menu>ul{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-list>ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 13px;
+        margin-top: 40px;
+      }
+      footer p{
         text-align: center;
+        font-size: 10px;
+        margin-top: 40px;
+      }
+      .footer-icon{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-icon li{
+        list-style: none;
+        font-size: 20px;
+      }
+}
+/* tablet responsive  */
+@media screen and (min-width:500px) and (max-width:800px) {
+    nav{
+        flex-direction: column;
+        gap: 10px;
     }
     .sec2-img .pic{
         position: relative;
         width: 160px;
         height: 180px;
         top: -120px;
-        left: -100px;
+        left: -220px;
     }
-    .sec2-text{
+    .title-img img{
+        width: 350px;
+        height: 350px;
+    }
+    .position img{
+        width: 150px;
+        height: 180px;
+        position: relative;
+        top: -100px;
+        left: -180px;
+    }
+    .box{
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
+    }
+    footer p{
         text-align: center;
-        margin-top: -70px;
-    }
+        font-size: 13px;
+        margin-top: 30px;
+      }
+      .footer-list>ul{
+        font-size: 12px;
+        margin-top: 40px;
+      }
 }
