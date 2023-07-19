@@ -47,8 +47,9 @@ ul .icon-li{
     padding: 5px;
     border-radius: 7px;
 }
-ul li i{
-    color: rgb(175, 18, 18);
+.icon-1{
+    color: #FF0000;
+    margin-right: 5px;
 }
 /* banner part  */
 .banner{
